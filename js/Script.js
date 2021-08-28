@@ -19,39 +19,47 @@ function jv(num){
       case 1:
         console.log(num)
         b1.innerHTML="X"
-        b1
+        b1=1
         break;
       case 2:
         console.log()
         b2.innerHTML="X"
+        b2=1
         break;
       case 3:
         console.log()
         b3.innerHTML="X"
+        b3=1
         break;
       case 4:
         console.log()
         b4.innerHTML="X"
+        b4=1
         break;
       case 5:
         console.log()
         b5.innerHTML="X"
+        b5=1
         break;
       case 6:
         console.log()
         b6.innerHTML="X"
+        b6=1
         break;
       case 7:
         console.log()
         b7.innerHTML="X"
+        b7=1
         break;
       case 8:
         console.log()
         b8.innerHTML="X"
+        b8=1
         break;
       case 9:
         console.log()
         b9.innerHTML="X"
+        b9=1
         break;
       default:
         alert("[ERRO!]")
@@ -63,37 +71,47 @@ function jv(num){
     case 1:
         console.log(num)
         b1.innerHTML="O"
+        b1=0
         break;
       case 2:
         console.log()
         b2.innerHTML="O"
+        b2=0
         break;
       case 3:
         console.log()
         b3.innerHTML="O"
+        b3=0
         break;
       case 4:
         console.log()
         b4.innerHTML="O"
+        b4=0
         break;
       case 5:
         console.log(num)
         b5.innerHTML="O"
+        b5=0
         break;
       case 6:
         console.log()
         b6.innerHTML="O"
+        b7=0
         break;
       case 7:
         console.log()
         b7.innerHTML="O"  
+        b7=0
+        breaḱ;
       case 8:
         console.log()
         b8.innerHTML="X"
+        b8=0
         break;
       case 9:
         console.log()
         b9.innerHTML="X"
+        b9=0
         break;
       default:
         alert("[ERRO!]")

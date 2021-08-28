@@ -98,8 +98,7 @@ function jv(num){
       default:
         alert("[ERRO!]")
         break;
-    }
-    
+    } 
   }
   if(b1+b2+b3 ==3 || b4+b5+b6 ==3 ||b7+b8+b9 ==3 || b1+b4+b7 ==3 || b2+b5+b8 ==3 ||b3+b6+b9 ==3||b1+b5+b9==3||b3+b5+b7==3){
     alert("X Ganhou!")

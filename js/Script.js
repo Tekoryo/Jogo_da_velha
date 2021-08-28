@@ -7,8 +7,8 @@ var b5=document.getElementById("b5")
 var b6=document.getElementById("b6")
 var b7=document.getElementById("b7")
 var b8=document.getElementById("b8")
-var b9=document.getElementById("b9")
-
+var A9=document.getElementById("A9")
+var res=document.getElementById("res")
 function jv(num){
   console.log(num)
   Nv+=1
@@ -70,6 +70,7 @@ function jv(num){
     switch(num){
     case 1:
         console.log(num)
+
         b1.innerHTML="O"
         b1=0
         break;
@@ -110,14 +111,17 @@ function jv(num){
         break;
       case 9:
         console.log()
-        b9.innerHTML="X"
+        A9.innerHTML="X"
         b9=0
+        res.innerHTML="ERRADO"
         break;
       default:
+        
         alert("[ERRO!]")
         break;
     } 
   }
+  //"O" a soma total deve ser 6
   if(b1+b2+b3 ==3 || b4+b5+b6 ==3 ||b7+b8+b9 ==3 || b1+b4+b7 ==3 || b2+b5+b8 ==3 ||b3+b6+b9 ==3||b1+b5+b9==3||b3+b5+b7==3){
     alert("X Ganhou!")
   }else if(b1+b2+b3 ==0 || b4+b5+b6 ==0 ||b7+b8+b9 ==0 || b1+b4+b7 ==0 || b2+b5+b8 ==0 ||b3+b6+b9 ==0||b1+b5+b9==0||b3+b5+b7==0){

@@ -8,57 +8,57 @@ var b5=document.getElementById("b5")
 var b6=document.getElementById("b6")
 var b7=document.getElementById("b7")
 var b8=document.getElementById("b8")
-var A9=document.getElementById("A9")
-var res=document.getElementById("res")
+var b9=document.getElementById("b9")
+var B1,B2,B3,B4,B5,B6,B7,B8,B9
   console.log(num)
   Nv+=1
   console.log(`Nv é ${Nv}`)
   if(Nv%2==0){
     switch (num){
       case 1:
-        b1=1
+        B1="X"
         console.log(b1)
         b1.innerHTML="X"
         break;
       case 2:
         console.log(b2)
         b2.innerHTML="X"
-        b2=1
+        B2=1
         break;
       case 3:
         console.log(b3)
         b3.innerHTML="X"
-        b3=1
+        B3=1
         break;
       case 4:
         console.log(b4)
         b4.innerHTML="X"
-        b4=1
+        B4=1
         break;
       case 5:
         console.log(b5)
         b5.innerHTML="X"
-        b5=1
+        B5="X"
         break;
       case 6:
         console.log(b6)
         b6.innerHTML="X"
-        b6=1
+        B6=1
         break;
       case 7:
         console.log(b7)
         b7.innerHTML="X"
-        b7=1
+        B7=1
         break;
       case 8:
         console.log(b8)
         b8.innerHTML="X"
-        b8=1
+        B8=1
         break;
       case 9:
         console.log(b9)
         b9.innerHTML="X"
-        b9=1
+        B9="X"
         break;
       default:
         alert("[ERRO!]")
@@ -101,14 +101,14 @@ var res=document.getElementById("res")
         b7.innerHTML="O"  
         b7=2
         console.log(b7)
-        breaḱ;
+        break;
       case 8:
         b8.innerHTML="O"
         b8=2
         console.log(b8)
         break;
       case 9:
-        A9.innerHTML="O"
+        b9.innerHTML="O"
         b9=2
         console.log(b9)
         break;
@@ -117,7 +117,7 @@ var res=document.getElementById("res")
         break;
     } 
   }
-  if(b1+b2+b3 ==3 || b4+b5+b6 ==3 ||b7+b8+b9==3 || b1+b4+b7 ==3 || b2+b5+b8 ==3 ||b3+b6+b9 ==3||b1+b5+b9==3||b3+b5+b7==3){
+  if(B1+B2+B3 ==3 || B4+B5+B6 ==3 ||B7+B8+B9==3 || B1+B4+B7 ==3 || B2+B5+B8 ==3 ||B3+B6+B9 ==3||B1=="X"&&B5=="X"&&B9=="X"||B3+B5+B7==3){
     alert("X Ganhou!")
   }else if(b1+b2+b3 ==6 || b4+b5+b6 ==6 ||b7+b8+b9 ==6 || b1+b4+b7 ==6 || b2+b5+b8 ==6 ||b3+b6+b9 ==6||b1+b5+b9==6||b3+b5+b7==6){
     alert("O Ganhou!")

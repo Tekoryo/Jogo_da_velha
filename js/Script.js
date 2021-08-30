@@ -122,7 +122,7 @@ var res=document.getElementById("res")
     res.innerHTML="O ganhador foi o X"
   }else if(O[1]+O[2]+O[3]==6 || O[4]+O[5]+O[6]==6 || O[7]+O[8]+O[9]==6 || O[1]+O[4]+O[7]==6 || O[2]+O[5]+O[8]==6 || O[3]+O[6]+O[9]==6 || O[1]+[5]+O[9]==6 || O[3]+O[5]+O[7]==6){
     res.innerHTML="O ganhador foi o O"
-  }else if(Nv>=10){
+  }else if(X[1]+X[2]+X[3]+X[4]+X[5]+X[6]+X[7]+X[8]+X[9]==4&&O[1]+O[2]+O[3]+O[4]+O[5]+O[6]+O[7]+O[8]+O[9]==10){
     res.innerHTML="Deu empate!"
   }
 }

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 *{
     background-color: aliceblue;
-    color: white;
+    color: black;
     font-size: 12pt;
     font-family: 'Courier New', Courier, monospace;
     margin:0px;
@@ -13,7 +13,7 @@ div{
 #res{
     width: 500px;
     height: 500px;
-    background-color: black;
+    background-color:  blueviolet;
 }
 table{
     display: flex;

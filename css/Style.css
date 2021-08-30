@@ -1,0 +1,33 @@
+@charset "UTF-8";
+*{
+    background-color: aliceblue;
+    color: white;
+    font-size: 12pt;
+    font-family: 'Courier New', Courier, monospace;
+    margin:0px;
+    padding:0px;
+}
+div{
+    display: inline;
+}
+#res{
+    width: 500px;
+    height: 500px;
+    background-color: black;
+}
+table{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1300px;
+    margin: auto; 
+}
+tr{
+    border: 1px black solid;
+    padding: 10px;
+}
+th{
+    border: 1px solid black;
+    padding: 50px;
+}

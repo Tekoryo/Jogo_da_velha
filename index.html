@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/Style.css">
   <script src="js/Script.js"></script>
-  <title>html</title>
+  <title>Jogo da velha</title>
 </head>
 <body>
-	<h1>html</h1>
-	<table>
-	  <tr>
-	    <p id="b1"><th ><input type="button" name="b1" id="b1" value="1" onclick="jv(1)"></th></p>
-	    <p id="b2"><th><input type="button" name="b2" id="b2" value="2" onclick="jv(2)"></th></p>
-	    <p id="b3"><th><input type="button" name="b3" id="b3" value="3" onclick="jv(3)"></th></p>
-	  </tr>
-	  <tr>
-	    <p id="b4"><th><input type="button" name="b4" id="b4" value="4" onclick="jv(4)"></th></p>
-	    <p id="b5"><th><input type="button" name="b5" id="b5" value="5" onclick="jv(5)"></th></p>
-	    <p id="b6"><th><input type="button" name="b6" id="b6" value="6" onclick="jv(6)"></th></p>
-	  </tr>
-	  <tr>
-      	<p id="b7"><th><input type="button" name="b7" id="b7" value="7" onclick="jv(7)"></th></p>
-	    <p id="b8"><th><input type="button" name="b8" id="b8" value="8" onclick="jv(8)"></th></p>
-	    <p id="A9"><th><input type="button" name="b9" id="b9" value="9" onclick="jv(9)"></th></p>
-	  </tr>
-	</table>
+	<h1>Jogo da velha</h1>
+	<div id="base"> 
+		<table>
+			<tr>
+			  	<p id="b1"><th onclick="jv(1)">B1</th></p>
+			  	<p id="b2"><th onclick="jv(2)">B2</th></p>
+			  	<p id="b3"><th onclick="jv(3)">B3</th></p>
+			</tr>
+			<tr>
+			  	<p id="b4"><th onclick="jv(4)">B4</th></p>
+			  	<p id="b5"><th onclick="jv(5)">B5</th></p>
+			  	<p id="b6"><th onclick="jv(6)">B6</th></p>
+			</tr>
+			<tr>
+				<p id="b7"><th onclick="jv(7)">B7</th></p>
+				<p id="b8"><th onclick="jv(8)">B8</th></p>
+			  	<p id="A9"><th onclick="jv(9)">B9</th></p>
+			</tr>
+		  </table>
+	</div>
 	<div id="res"></div>
 </body>

@@ -14,6 +14,7 @@ var B1,B2,B3,B4,B5,B6,B7,B8,B9
   Nv+=1
   console.log(`Nv é ${Nv}`)
   if(Nv%2==0){
+    //Lado do player X
     switch (num){
       case 1:
         B1="X"
@@ -65,12 +66,13 @@ var B1,B2,B3,B4,B5,B6,B7,B8,B9
         break;
     }
   }else{
+    //Lado player O
       console.log("O")
     switch(num){
     case 1:
         b1.innerHTML="O"
         b1=2
-        console.log(b1)
+        console.log(`b1 ${b1}`)
         break;
       case 2:
         b2.innerHTML="O"
@@ -117,11 +119,17 @@ var B1,B2,B3,B4,B5,B6,B7,B8,B9
         break;
     } 
   }
-  if(B1+B2+B3 ==3 || B4+B5+B6 ==3 ||B7+B8+B9==3 || B1+B4+B7 ==3 || B2+B5+B8 ==3 ||B3+B6+B9 ==3||B1=="X"&&B5=="X"&&B9=="X"||B3+B5+B7==3){
+  // Logica de ganhador
+  if(B1+B2+B3 ==3 || B4+B5+B6 ==3 ||B7+B8+B9==3 || B1+B4+B7 ==3 || B2+B5+B8 ==3 ||B3+B6+B9 ==3||B1==="X"&&B5==="X"&&B9==="X"||B3+B5+B7==3){
     alert("X Ganhou!")
   }else if(b1+b2+b3 ==6 || b4+b5+b6 ==6 ||b7+b8+b9 ==6 || b1+b4+b7 ==6 || b2+b5+b8 ==6 ||b3+b6+b9 ==6||b1+b5+b9==6||b3+b5+b7==6){
     alert("O Ganhou!")
   }else if(Nv>=9){
     alert("Deu velha!")
-  }
+    /* PROBLEMA
+        O codigo não esta somando
+    */
+  }else if(b2==2){
+    alert("oi")
+  } 
 }

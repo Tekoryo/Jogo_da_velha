@@ -18,48 +18,56 @@ var res=document.getElementById("res")
     //Lado do player X
     switch (num){
       case 1:
-        b1.innerHTML="X"
+        b1.innerHTML=""
         img[0].src = "img/X.png"
         X[1]=2
         console.log(`B1=${X[1]}`)
         break;
       case 2:
-        b2.innerHTML="X"
+        b2.innerHTML=""
+        img[1].src = "img/X.png"
         X[2]=2
         console.log(`B2=${X[2]}`)
         break;
       case 3:
-        b3.innerHTML="X"
+        b3.innerHTML=""
+        img[2].src = "img/X.png"
         X[3]=2
         console.log(`B3=${X[3]}`)
         break;
       case 4:
-        b4.innerHTML="X"
+        b4.innerHTML=""
+        img[3].src = "img/X.png"
         X[4]=2
         console.log(`B4=${X[4]}`)
         break;
       case 5:
-        b5.innerHTML="X"
+        b5.innerHTML=""
+        img[4].src = "img/X.png"
         X[5]=2
         console.log(`B5=${X[5]}`)
         break;
       case 6:
-        b6.innerHTML="X"
+        b6.innerHTML=""
+        img[5].src = "img/X.png"
         X[6]=2
         console.log(`B6=${X[6]}`)
         break;
       case 7:
-        b7.innerHTML="X"
+        b7.innerHTML=""
+        img[6].src = "img/X.png"
         X[7]=2
         console.log(`B7=${X[7]}`)
         break;
       case 8:
-        b8.innerHTML="X"
+        b8.innerHTML=""
+        img[7].src = "img/X.png"
         X[8]=2
         console.log(`B8=${X[8]}`)
         break;
       case 9:
-        b9.innerHTML="X"
+        b9.innerHTML=""
+        img[8].src = "img/X.png"
         X[9]=2
         console.log(`B9=${X[9]}`)
         break;

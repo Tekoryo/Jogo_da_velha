@@ -12,7 +12,6 @@ var b6=document.getElementById("b6")
 var b7=document.getElementById("b7")
 var b8=document.getElementById("b8")
 var b9=document.getElementById("b9")
-var res=document.getElementById("res")
   Nv+=1
   if(Nv%2==0){
     //Lado do player X

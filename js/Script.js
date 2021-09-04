@@ -1,6 +1,6 @@
 var Nv=0
-var X = [0,0,0,0,0,0,0,0,0]
-var O = [0,0,0,0,0,0,0,0,0]
+const X = [0,0,0,0,0,0,0,0,0]
+const O = [0,0,0,0,0,0,0,0,0]
 function jv(num){
 var b1=document.getElementById("b1")
 var b2=document.getElementById("b2")
@@ -18,47 +18,47 @@ var res=document.getElementById("res")
     switch (num){
       case 1:
         b1.innerHTML="X"
-        X[1]=4
+        X[1]=2
         console.log(`B1=${X[1]}`)
         break;
       case 2:
         b2.innerHTML="X"
-        X[2]=4
+        X[2]=2
         console.log(`B2=${X[2]}`)
         break;
       case 3:
         b3.innerHTML="X"
-        X[3]=4
+        X[3]=2
         console.log(`B3=${X[3]}`)
         break;
       case 4:
         b4.innerHTML="X"
-        X[4]=4
+        X[4]=2
         console.log(`B4=${X[4]}`)
         break;
       case 5:
         b5.innerHTML="X"
-        X[5]=4
+        X[5]=2
         console.log(`B5=${X[5]}`)
         break;
       case 6:
         b6.innerHTML="X"
-        X[6]=4
+        X[6]=2
         console.log(`B6=${X[6]}`)
         break;
       case 7:
         b7.innerHTML="X"
-        X[7]=4
+        X[7]=2
         console.log(`B7=${X[7]}`)
         break;
       case 8:
         b8.innerHTML="X"
-        X[8]=4
+        X[8]=2
         console.log(`B8=${X[8]}`)
         break;
       case 9:
         b9.innerHTML="X"
-        X[9]=4
+        X[9]=2
         console.log(`B9=${X[9]}`)
         break;
       default:
@@ -121,11 +121,11 @@ var res=document.getElementById("res")
   console.log(`X = ${X[1]+X[2]+X[3]+X[4]+X[5]+X[6]+X[7]+X[8]+X[9]}`)
   console.log(`O = ${O[1]+O[2]+O[3]+O[4]+O[5]+O[6]+O[7]+O[8]+O[9]}`)
   // Logica de ganhador
-  if(X[1]+X[2]+X[3]==3 || X[4]+X[5]+X[6]==3 || X[7]+X[8]+X[9]==3 || X[1]+X[4]+X[7]==3 || X[2]+X[5]+X[8]==3 || X[3]+X[6]+X[9]==3 || X[1]+X[5]+X[9]==3 || X[3]+X[5]+X[7]==3){
-    res.innerHTML="O ganhador foi o X"
+  if(X[1]+X[2]+X[3]==6 || X[4]+X[5]+X[6]==6 || X[7]+X[8]+X[9]==6 || X[1]+X[4]+X[7]==6 || X[2]+X[5]+X[8]==6 || X[3]+X[6]+X[9]==6 || X[1]+X[5]+X[9]==6 || X[3]+X[5]+X[7]==6){
+    alert("[O Ganhador foi X!]")
   }else if(O[1]+O[2]+O[3]==6 || O[4]+O[5]+O[6]==6 || O[7]+O[8]+O[9]==6 || O[1]+O[4]+O[7]==6 || O[2]+O[5]+O[8]==6 || O[3]+O[6]+O[9]==6 || O[1]+[5]+O[9]==6 || O[3]+O[5]+O[7]==6){
-    res.innerHTML="O ganhador foi o O"
+    alert("[O Ganhador foi O!]")
   }else if(O[1]+O[2]+O[3]+O[4]+O[5]+O[6]+O[7]+O[8]+O[9]==10){
-    res.innerHTML="Deu Velha!"
+    alert("[VELHAAA!]")
   }
 }

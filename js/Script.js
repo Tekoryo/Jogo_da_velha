@@ -1,6 +1,6 @@
 var Nv=0
-var X = []
-var O = []
+var X = [0,0,0,0,0,0,0,0,0]
+var O = [0,0,0,0,0,0,0,0,0]
 function jv(num){
 var b1=document.getElementById("b1")
 var b2=document.getElementById("b2")
@@ -17,49 +17,49 @@ var res=document.getElementById("res")
     //Lado do player X
     switch (num){
       case 1:
-        X[1]=1
-        console.log(b1)
         b1.innerHTML="X"
+        X[1]=1
+        console.log(`B1=${X[1]}`)
         break;
       case 2:
-        console.log(b2)
         b2.innerHTML="X"
         X[2]=1
+        console.log(`B2=${X[2]}`)
         break;
       case 3:
-        console.log(b3)
         b3.innerHTML="X"
         X[3]=1
+        console.log(`B3=${X[3]}`)
         break;
       case 4:
-        console.log(b4)
         b4.innerHTML="X"
         X[4]=1
+        console.log(`B4=${X[4]}`)
         break;
       case 5:
-        console.log(b5)
         b5.innerHTML="X"
         X[5]=1
+        console.log(`B5=${X[5]}`)
         break;
       case 6:
-        console.log(b6)
         b6.innerHTML="X"
         X[6]=1
+        console.log(`B6=${X[6]}`)
         break;
       case 7:
-        console.log(b7)
         b7.innerHTML="X"
         X[7]=1
+        console.log(`B7=${X[7]}`)
         break;
       case 8:
-        console.log(b8)
         b8.innerHTML="X"
         X[8]=1
+        console.log(`B8=${X[8]}`)
         break;
       case 9:
-        console.log(b9)
         b9.innerHTML="X"
         X[9]=1
+        console.log(`B9=${X[9]}`)
         break;
       default:
         alert("[ERRO!]")
@@ -71,58 +71,61 @@ var res=document.getElementById("res")
     case 1:
         b1.innerHTML="O"
         O[1]=2
+        console.log(`B1=${O[1]}`)
         break;
       case 2:
         b2.innerHTML="O"
-        0[2]=2
-        console.log(b2)
+        O[2]=2
+        console.log(`B2=${O[2]}`)
         break;
       case 3:
         b3.innerHTML="O"
         O[3]=2
-        console.log(b3)
+        console.log(`B3=${O[3]}`)
         break;
       case 4:
         b4.innerHTML="O"
         O[4]=2
-        console.log(b4)
+        console.log(`B4=${O[4]}`)
         break;
       case 5:
         b5.innerHTML="O"
         O[5]=2
-        console.log(b5)
+        console.log(`B5=${O[5]}`)
         break;
       case 6:
         b6.innerHTML="O"
         O[6]=2
-        console.log(b6)
+        console.log(`B6=${O[6]}`)
         break;
       case 7:
         b7.innerHTML="O"  
         O[7]=2
-        console.log(b7)
+        console.log(`B7=${O[7]}`)
         break;
       case 8:
         b8.innerHTML="O"
         O[8]=2
-        console.log(b8)
+        console.log(`B8=${O[8]}`)
         break;
       case 9:
         b9.innerHTML="O"
         O[9]=2
-        console.log(b9)
+        console.log(`B9=${O[9]}`)
         break;
       default:
         alert("[ERRO!]")
         break;
     } 
   }
+  console.log(X[1]+X[2]+X[3]+X[4]+X[5]+X[6]+X[7]+X[8]+X[9])
+  console.log(O[1]+O[2]+O[3]+O[4]+O[5]+O[6]+O[7]+O[8]+O[9])
   // Logica de ganhador
-  if(X[1]+X[2]+X[3]==3 || X[4]+X[5]+X[6]==3 || X[7]+X[8]+X[9]==3 || X[1]+X[4]+X[7]==3 || X[2]+X[5]+X[8]==3 || X[3]+X[6]+X[9]==3 || X[1]+X[5]+X[9]==3 || X[3]+X[5]+X[7]==3){
+  if(X[1]+X[2]+X[3]==3 || X[4]+X[5]+X[6]==3 || X[7]+X[8]+X[9]==3 || X[1]+X[4]+X[7]==3 || X[2]+X[5]+X[8]==3 || X[3]+X[6]+X[9]==3 || X[1]+X[5]+X[9]==3 || X[3]+X[5]+X[7]==9){
     res.innerHTML="O ganhador foi o X"
   }else if(O[1]+O[2]+O[3]==6 || O[4]+O[5]+O[6]==6 || O[7]+O[8]+O[9]==6 || O[1]+O[4]+O[7]==6 || O[2]+O[5]+O[8]==6 || O[3]+O[6]+O[9]==6 || O[1]+[5]+O[9]==6 || O[3]+O[5]+O[7]==6){
     res.innerHTML="O ganhador foi o O"
-  }else if(X[1]+X[2]+X[3]+X[4]+X[5]+X[6]+X[7]+X[8]+X[9]==4&&O[1]+O[2]+O[3]+O[4]+O[5]+O[6]+O[7]+O[8]+O[9]==10){
+  }else if(O[1]+O[2]+O[3]+O[4]+O[5]+O[6]+O[7]+O[8]+O[9]==10){
     res.innerHTML="Deu empate!"
   }
 }

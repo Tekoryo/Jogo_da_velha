@@ -2,6 +2,7 @@ var Nv=0
 const X = [0,0,0,0,0,0,0,0,0]
 const O = [0,0,0,0,0,0,0,0,0]
 function jv(num){
+const img = document.querySelectorAll ("img") ; 
 var b1=document.getElementById("b1")
 var b2=document.getElementById("b2")
 var b3=document.getElementById("b3")
@@ -18,6 +19,7 @@ var res=document.getElementById("res")
     switch (num){
       case 1:
         b1.innerHTML="X"
+        img[0].src = "img/X.png"
         X[1]=2
         console.log(`B1=${X[1]}`)
         break;

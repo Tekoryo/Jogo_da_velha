@@ -7,28 +7,15 @@
     margin:0px;
     padding:0px;
 }
-#base{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 1300px;
-    margin: 50px;
-    background-color: blueviolet;
-}
-
 th{
     border: 1px solid black;
-    padding: 50px;
+    padding: 0px;
 }
 div.B{
     width: 100px;
     height: 100px;
-    background-color: aquamarine;
 }
 p{
     width: 100px;
     height:100px;
-    background-color: aqua;
-    text-align: center;
-}
+}   

@@ -17,20 +17,17 @@ var b9=document.getElementById("b9")
     //Lado do player X
     switch (num){
       case 1:
-        b1.innerHTML=""
-        img[0].src = "img/X.png"
+        b1.innerHTML="X"
         X[1]=2
         console.log(`B1=${X[1]}`)
         break;
       case 2:
-        b2.innerHTML=""
-        img[1].src = "img/X.png"
+        b2.innerHTML="X"
         X[2]=2
         console.log(`B2=${X[2]}`)
         break;
       case 3:
-        b3.innerHTML=""
-        img[2].src = "img/X.png"
+        b3.innerHTML="X"
         X[3]=2
         console.log(`B3=${X[3]}`)
         break;

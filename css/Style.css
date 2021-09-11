@@ -1,6 +1,6 @@
 @charset "UTF-8";
 *{
-    background-color: aliceblue;
+    background-color: rgb(183, 222, 255);
     color: black;
     font-size: 12pt;
     font-family: 'Courier New', Courier, monospace;
@@ -8,10 +8,10 @@
     padding:0px;
 }
 th{
-    border: 1px solid black;
     padding: 0px;
 }
 div.B{
+    background-color: aliceblue;
     width: 100px;
     height: 100px;
 }
@@ -19,3 +19,38 @@ p{
     width: 100px;
     height:100px;
 }   
+#B1{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#B2{
+    border: 1px solid black;
+    border-top: 0px solid black;
+}
+#B3{
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+#B4{
+    border: 1px solid black;
+    border-left: 0px solid black;
+}
+#B5{
+    border: 1px solid black;
+}
+#B6{
+    border: 1px solid black;
+    border-right: 0px solid black;
+}
+#B7{
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+}
+#B8{
+    border: 1px solid black;
+    border-bottom: 0px solid black;
+}
+#B9{
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+}

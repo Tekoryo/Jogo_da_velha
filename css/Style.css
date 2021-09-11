@@ -12,6 +12,8 @@ th{
 }
 div.B{
     background-color: aliceblue;
+    text-align: center;
+    font-size: 64pt;
     width: 100px;
     height: 100px;
 }

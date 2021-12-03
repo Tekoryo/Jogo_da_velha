@@ -14,12 +14,15 @@ function jv(num){
   const b7=document.getElementById("b7")
   const b8=document.getElementById("b8")
   const b9=document.getElementById("b9")
+  const Jogador=document.getElementById("Jogador")
   if(Nv%2==0){
     //Lado do player X
-    JogadorX(num)    
+    JogadorX(num)  
+    Jogador.innerHTML="X"
   }else{
     //Lado player O
     JogadorO(num)   
+    Jogador.innerHTML="O"
   }
   // Logica de ganhador
     Resultado(X,O)

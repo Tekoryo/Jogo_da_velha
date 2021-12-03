@@ -14,28 +14,47 @@ h1{
     text-align: center;
     margin-top: 20px;
 }
-section{
+h3{
+    font-size: 16pt;
+    font-family: Courier New, Courier, 'monospace';
+    margin: auto;
+    text-align: center;
+    margin-top: -70px;
+    /* Tem que resolver esta gambiarra */
+}
+#TebelaDePontos aside{
+    border: 1px solid black;
+    width: 500px;
+    height: 250px;
+    z-index: 5;
+}
+#TebelaDePontos h1{
+    font-size: 16pt;
+    font-family: Courier New, Courier, 'monospace';
+    margin: auto;
+    text-align: left;
+    margin-top: 20px;
+}
+#base aside{
     display: block;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
-    max-width: 1300px;
     margin: auto; 
 }
 table{
     margin: auto;   
     margin-top: 30px;
 }
-th{
+#JV th{
     padding: 0px;
 }
-div.B{
+#JV div.B{
     text-align: center;
     font-size: 128pt;
     width: 150px;
     height: 150px;
 }
-p{
+#JV p{
     text-align: center;
     font-size: 32pt;
     width: 150px;

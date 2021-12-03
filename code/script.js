@@ -1,6 +1,8 @@
 let Nv=0
+let Px=0,Po=0
+console.log(Px)
 const X = [0,0,0,0,0,0,0,0,0]
-const O = [0,0,0,0,0,0,0,0,0]
+const O = [0,0,0,0,0,0,0,0,0];
 function jv(num){
   Nv+=1
   const b1=document.getElementById("b1")
@@ -129,9 +131,22 @@ const JogadorO = function(num){
 const Resultado = function(X,O){
   if(X[0]+X[1]+X[2]==3 || X[3]+X[4]+X[5]==3 || X[6]+X[7]+X[8]==3 || X[0]+X[3]+X[6]==3 || X[1]+X[4]+X[7]==3 || X[2]+X[5]+X[8]==3 || X[0]+X[4]+X[8]==3 || X[2]+X[4]+X[6]==3){
     alert("[O Ganhador foi X!]")
+    Pontos(1)
   }else if(O[1]+O[2]+O[3]==6 || O[4]+O[5]+O[6]==6 || O[7]+O[8]+O[9]==6 || O[1]+O[4]+O[7]==6 || O[2]+O[5]+O[8]==6 || O[3]+O[6]+O[9]==6 || O[1]+O[5]+O[9]==6 || O[3]+O[5]+O[7]==6){
     alert("[O Ganhador foi O!]")
+    Pontos(0)
   }else if(X[1]+X[2]+X[3]+X[4]+X[5]+X[6]+X[7]+X[8]+X[9]==4||O[1]+O[2]+O[3]+O[4]+O[5]+O[6]+O[7]+O[8]+O[9]==10){
     alert("[VELHAAA!]")
+  }
+}
+const Pontos = function(pontos){
+  const PlX = document.getElementById("PlX")
+  const PlO = document.getElementById("PlO")
+  if(pontos==1){
+    Px++
+    PlX.innerHTML=`${Px}`
+  }else{
+    Po++
+    PlO.innerHTML=`${Po}`
   }
 }

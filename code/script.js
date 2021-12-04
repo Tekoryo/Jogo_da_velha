@@ -153,3 +153,6 @@ const Pontos = function(pontos){
     PlO.innerHTML=`${Po}`
   }
 }
+function Reset (){
+  
+}

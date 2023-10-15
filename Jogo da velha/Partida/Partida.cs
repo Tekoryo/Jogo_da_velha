@@ -7,7 +7,16 @@ internal class Partida
 
     public void inicio()
     {
+        TipoJogador();
+        
+        tabuleiro.IsJogador(jogador);
         tabuleiro.isGerador();
+    }
+    private void TipoJogador()
+    {
+        Console.WriteLine("Qual Voce Escolhe Player1: [X/O]?");
+        String Player1 = Console.ReadLine()!;
+        jogador.TipoPlayer(Player1);
     }
 }
 

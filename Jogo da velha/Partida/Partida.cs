@@ -9,6 +9,7 @@ internal class Partida
     {
         TipoJogador();
         
+        
         tabuleiro.IsJogador(jogador);
         tabuleiro.isGerador();
     }
@@ -18,5 +19,6 @@ internal class Partida
         String Player1 = Console.ReadLine()!;
         jogador.TipoPlayer(Player1);
     }
+    
 }
 

@@ -4,6 +4,17 @@ internal class Jogador
 {
     private string Joagador1;
     private string Joagador2;
+    private int NumeroMovimento=0;
+
+    public void ContadorMovimento()
+    {
+        NumeroMovimento++;
+        
+    }
+    public void printN()
+    {
+        Console.WriteLine(NumeroMovimento);
+    }
     public void TipoPlayer(String Player1)
     {
         string Player2;
@@ -25,6 +36,7 @@ internal class Jogador
 
     public string IsJogador() 
     {
-        return Joagador1;
+        if (NumeroMovimento % 2 == 0) return Joagador1;
+        else return Joagador2;
     }
 }

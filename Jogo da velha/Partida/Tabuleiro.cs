@@ -19,6 +19,7 @@ internal class Tabuleiro
             isTabuleiro();
             isMovimento();
             Console.Clear();
+            jogador.printN();
         } while (true);
     }    
     
@@ -38,10 +39,17 @@ internal class Tabuleiro
         string posicao = jogador.Jogada();
         for (int i = 0; i < Velha.GetLength(0); i++)
         {
-            if (Velha[i]==posicao) Velha[i] = jogador.IsJogador();
+            if (Velha[i]==posicao)
+            {
+                if (Velha[i]=="X" || Velha[i]=="O" || Velha[i]=="x" || Velha[i]=="o") Console.WriteLine("Jogada invalida!");
+                else
+                 {
+                   Velha[i] = jogador.IsJogador();
+                    jogador.ContadorMovimento();
+                 }
+            }
         }
     }
-
     private void isDadosInicio()
     {
         for (int i = 0;i < Velha.GetLength(0);i++)

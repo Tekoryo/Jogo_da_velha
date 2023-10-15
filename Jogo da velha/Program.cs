@@ -1,9 +1,11 @@
-﻿
-using Jogo_da_velha;
+﻿using Jogo_da_velha;
 
 Console.WriteLine("Jogo da Velha!");
 
-Mapa mapa = new Mapa();
-mapa.Criacao();
+Partida partida = new Partida();
 
 
+    partida.inicio();
+   
+Console.WriteLine("Fim!");
+ 

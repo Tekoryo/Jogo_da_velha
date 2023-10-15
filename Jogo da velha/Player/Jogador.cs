@@ -2,6 +2,10 @@
 
 internal class Jogador
 {
+    public string TipoJogador()
+    {
+        return"x";
+    }
     public string Jogada()
     {
         Console.WriteLine("\n Sua Jogada:");

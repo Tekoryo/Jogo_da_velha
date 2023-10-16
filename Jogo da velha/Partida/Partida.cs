@@ -3,7 +3,7 @@
 internal class Partida
 {
     Tabuleiro tabuleiro = new Tabuleiro();
-    Jogador jogador = new Jogador();
+    Jogador player = new Jogador();
     VerificacaoVitoria verificacao = new VerificacaoVitoria();
 
     public void IsPartida()
@@ -13,18 +13,20 @@ internal class Partida
         TipoJogador();
         do
         {
-            tabuleiro.IsJogador(jogador);
+            Console.WriteLine($"Vez do {player.VezDoJogador(1)}:");
+            tabuleiro.IsJogador(player);
             tabuleiro.IsVerificador(verificacao);
             tabuleiro.isGerenciador();
         }while (IsVerificacao());
+
         if(verificacao.SetIsVitoria()==1) verificacao.IsVitoiraDe(1);
         else if(verificacao.SetIsVitoria()==-1) verificacao.IsVitoiraDe(-1);
     }
     private void TipoJogador()
     {
         Console.WriteLine("Qual Voce Escolhe Player1: [X/O]?");
-        String Player1 = Console.ReadLine()!;
-        jogador.TipoPlayer(Player1);
+        string Player1 = Console.ReadLine()!;
+        player.TipoPlayer(Player1);
     }
     
     private bool IsVerificacao()

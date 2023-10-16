@@ -21,7 +21,7 @@ internal class VerificacaoVitoria
         if (VericadorVelha[0]==VericadorVelha[4] && VericadorVelha[4]==VericadorVelha[8]) return 1;
         else if (VericadorVelha[2]==VericadorVelha[4] && VericadorVelha[4]==VericadorVelha[6]) return 1;
 
-        if (player.GetContadorMovimento()==9)
+        if (player.GetContadorMovimento()==10)
         {
             return -1;
         }
@@ -37,11 +37,9 @@ internal class VerificacaoVitoria
     }
     public void IsVitoiraDe(int FimPartida)
     {
-        string Vitorias;
-        if (player.IsJogador()==player.GetIsJoagador1()) Vitorias="Jogador 1";
-        else Vitorias="Jogador 2";
+        string Vitoria = player.VezDoJogador(0);
 
-        if (FimPartida==1) Console.WriteLine($"Vitoria do {Vitorias}");
+        if (FimPartida==1) Console.WriteLine($"Vitoria do {Vitoria}");
         else Console.WriteLine($"O jogo terminou em empate!");
         Thread.Sleep(1000);
     }

@@ -1,10 +1,13 @@
-﻿namespace Jogo_da_velha;
+﻿using System.Numerics;
+
+namespace Jogo_da_velha;
 
 internal class Jogador
 {
-    private string Joagador1;
-    private string Joagador2;
-    private int NumeroMovimento=0;
+    private string? Jogador1;
+    private string? Jogador2;
+    private int NumeroMovimento=1;
+    private int JogadorAtual;
 
     public void SetContadorMovimento()
     {
@@ -14,23 +17,25 @@ internal class Jogador
     {
        return NumeroMovimento;
     }
-    public string GetIsJoagador1()
+    public string GetIsJogador1()
     {
-        return Joagador1;
+        JogadorAtual=1;
+        return Jogador1;
     }
-    public string GetIsJoagador2()
+    public string GetIsJogador2()
     {
-        return Joagador2;
+        JogadorAtual=2;
+        return Jogador2;
     }
-    public void TipoPlayer(String Player1)
+    public void TipoPlayer(string Player1)
     {
         string Player2;
        
-        if (Player1 == "X" || Player1 == "x") Player2 = "O";
-        else Player2 = "X";
+        if (Player1 == "x") Player2 = "o";
+        else Player2 = "x";
 
-        Joagador1 = Player1;
-        Joagador2 = Player2;
+        Jogador1 = Player1.ToUpper();
+        Jogador2 = Player2.ToUpper();
     }
 
     public string Jogada()
@@ -43,7 +48,19 @@ internal class Jogador
 
     public string IsJogador() 
     {
-        if (NumeroMovimento % 2 == 0) return Joagador1;
-        else return Joagador2;
+        if (NumeroMovimento % 2 == 0) return GetIsJogador2();
+        else return GetIsJogador1();
+    }
+    public string VezDoJogador(int x)
+    {
+        string Partida = " ";
+        if (x == 1)
+        {
+            if(JogadorAtual==2) Partida = GetIsJogador1().ToUpper();
+            else Partida = GetIsJogador2().ToUpper();
+        }
+
+        if (JogadorAtual==2) return $"Jogador 2 {Partida}";
+        else return $"Jogador 1 {Partida}";
     }
 }

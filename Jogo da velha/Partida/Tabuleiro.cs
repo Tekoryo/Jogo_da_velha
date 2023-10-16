@@ -43,16 +43,18 @@ internal class Tabuleiro
     private void isMovimento()
     {
         string posicao = jogador.Jogada();
+        
         for (int i = 0; i < Velha.GetLength(0); i++)
         {
             if (Velha[i]==posicao)
             {
-                if (Velha[i]=="X" || Velha[i]=="O" || Velha[i]=="x" || Velha[i]=="o") Console.WriteLine($"Desculpe, a casa {posicao} já está marcada com um {Velha[i]}.\"");
-                else
-                 {
-                   Velha[i] = jogador.IsJogador();
+                if (Velha[i]!="x" || Velha[i]!="o")
+                {
+                    Velha[i] = jogador.IsJogador();
                     jogador.SetContadorMovimento();
-                 }
+                }
+                else Console.WriteLine($"Desculpe, Tente em outra posição");
+                
                 Thread.Sleep(1000);
             }
         }

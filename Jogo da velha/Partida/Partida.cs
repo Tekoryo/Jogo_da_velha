@@ -1,17 +1,24 @@
-﻿namespace Jogo_da_velha;
+﻿namespace Jogo_da_velha.Partida;
 
 internal class Partida
 {
     Tabuleiro tabuleiro = new Tabuleiro();
     Jogador jogador = new Jogador();
+    VerificacaoVitoria verificacao = new VerificacaoVitoria();
 
-    public void inicio()
+    public void IsPartida()
     {
+        tabuleiro.SetIsVerificarVitoria();
+        tabuleiro.SetIsDadosInicio();
         TipoJogador();
-        
-        
-        tabuleiro.IsJogador(jogador);
-        tabuleiro.isGerador();
+        do
+        {
+            tabuleiro.IsJogador(jogador);
+            tabuleiro.IsVerificador(verificacao);
+            tabuleiro.isGerenciador();
+        }while (IsVerificacao());
+        if(verificacao.SetIsVitoria()==1) verificacao.IsVitoiraDe(1);
+        else if(verificacao.SetIsVitoria()==-1) verificacao.IsVitoiraDe(-1);
     }
     private void TipoJogador()
     {
@@ -20,5 +27,12 @@ internal class Partida
         jogador.TipoPlayer(Player1);
     }
     
+    private bool IsVerificacao()
+    {
+        if (verificacao.SetIsVitoria()==1) return false;
+        else if (verificacao.SetIsVitoria()==-1) return false;
+        return true;
+    }
+
 }
 

@@ -6,14 +6,21 @@ internal class Jogador
     private string Joagador2;
     private int NumeroMovimento=0;
 
-    public void ContadorMovimento()
+    public void SetContadorMovimento()
     {
         NumeroMovimento++;
-        
     }
-    public void printN()
+    public int GetContadorMovimento()
     {
-        Console.WriteLine(NumeroMovimento);
+       return NumeroMovimento;
+    }
+    public string GetIsJoagador1()
+    {
+        return Joagador1;
+    }
+    public string GetIsJoagador2()
+    {
+        return Joagador2;
     }
     public void TipoPlayer(String Player1)
     {

@@ -1,28 +1,34 @@
 ﻿using System;
+using System.Security.AccessControl;
 
-namespace Jogo_da_velha;
+namespace Jogo_da_velha.Partida;
 
 internal class Tabuleiro
 {
     private String[] Velha = new String[9];
     Jogador jogador = new Jogador();
+    VerificacaoVitoria verificacao = new VerificacaoVitoria();
+
     
-    public void IsJogador(Jogador x)
+    private void IsVerificarVitoria()
     {
-        jogador=x;
+        verificacao.IsDados(Velha,jogador);
     }
-    public void isGerador()
+    public void SetIsVerificarVitoria()
     {
-        isDadosInicio();
-        do
-        {
+        IsVerificarVitoria();
+    }
+    public void isGerenciador()
+    {
+        
             isTabuleiro();
             isMovimento();
+            IsVerificarVitoria();
+            Thread.Sleep(500);
             Console.Clear();
-            jogador.printN();
-        } while (true);
-    }    
-    
+        
+    }
+
     private void isTabuleiro()
     {
                         
@@ -41,12 +47,13 @@ internal class Tabuleiro
         {
             if (Velha[i]==posicao)
             {
-                if (Velha[i]=="X" || Velha[i]=="O" || Velha[i]=="x" || Velha[i]=="o") Console.WriteLine("Jogada invalida!");
+                if (Velha[i]=="X" || Velha[i]=="O" || Velha[i]=="x" || Velha[i]=="o") Console.WriteLine($"Desculpe, a casa {posicao} já está marcada com um {Velha[i]}.\"");
                 else
                  {
                    Velha[i] = jogador.IsJogador();
-                    jogador.ContadorMovimento();
+                    jogador.SetContadorMovimento();
                  }
+                Thread.Sleep(1000);
             }
         }
     }
@@ -57,5 +64,17 @@ internal class Tabuleiro
             int numero = i + 1;
             Velha[i] = numero.ToString();
         }
+    }
+    public void SetIsDadosInicio()
+    {
+        isDadosInicio();
+    }
+    public void IsJogador(Jogador Player)
+    {
+        jogador=Player;
+    }
+    public void IsVerificador(VerificacaoVitoria Verificador)
+    {
+        verificacao=Verificador;
     }
 }

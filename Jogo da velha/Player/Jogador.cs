@@ -7,7 +7,7 @@ internal class Jogador
     private string? Jogador1;
     private string? Jogador2;
     private int NumeroMovimento=1;
-    private int JogadorAtual;
+ 
 
     public void SetContadorMovimento()
     {
@@ -17,15 +17,11 @@ internal class Jogador
     {
        return NumeroMovimento;
     }
-    public string GetIsJogador1()
+    public string GetIsJogador(int ID)
     {
-        JogadorAtual=1;
-        return Jogador1;
-    }
-    public string GetIsJogador2()
-    {
-        JogadorAtual=2;
-        return Jogador2;
+        if(ID == 1)return Jogador1;
+        else return Jogador2;
+       
     }
     public void TipoPlayer(string Player1)
     {
@@ -38,29 +34,29 @@ internal class Jogador
         Jogador2 = Player2.ToUpper();
     }
 
-    public string Jogada()
+    public string IsJogada()
     {
         Console.WriteLine("\n Sua Jogada:");
         string posicao = Console.ReadLine()!;
-        return posicao;
-        
+        return posicao;        
     }
 
     public string IsJogador() 
-    {
-        if (NumeroMovimento % 2 == 0) return GetIsJogador2();
-        else return GetIsJogador1();
-    }
+    {        
+        if (NumeroMovimento % 2 == 0) return GetIsJogador(2);
+        else return GetIsJogador(1);
+    } 
     public string VezDoJogador(int x)
     {
         string Partida = " ";
+        
         if (x == 1)
         {
-            if(JogadorAtual==2) Partida = GetIsJogador1().ToUpper();
-            else Partida = GetIsJogador2().ToUpper();
+            if(IsJogador()==GetIsJogador(2)) Partida = GetIsJogador(2).ToUpper();
+            else Partida = GetIsJogador(1).ToUpper();
         }
 
-        if (JogadorAtual==2) return $"Jogador 2 {Partida}";
+        if (IsJogador()==GetIsJogador(2)) return $"Jogador 2 {Partida}";
         else return $"Jogador 1 {Partida}";
     }
 }

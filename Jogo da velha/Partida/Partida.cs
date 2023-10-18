@@ -13,6 +13,7 @@ internal class Partida
         TipoJogador();
         do
         {
+            
             Console.WriteLine($"Vez do {player.VezDoJogador(1)}:");
             tabuleiro.IsJogador(player);
             tabuleiro.IsVerificador(verificacao);

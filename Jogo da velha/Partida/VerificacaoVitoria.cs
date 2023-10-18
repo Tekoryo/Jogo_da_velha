@@ -14,7 +14,7 @@ internal class VerificacaoVitoria
     private int IsVitoria()
     {
   
-        for (int i = 0; i <VericadorVelha.GetLength(0);i+=3) if (VericadorVelha[i]==VericadorVelha[i+1] && VericadorVelha[i+1]==VericadorVelha[i+2]) return 1;
+        for (int i = 0; i <VericadorVelha.GetLength(0);i+=3) if (VericadorVelha[i]==VericadorVelha[i+1] && VericadorVelha[i]==VericadorVelha[i+2]) return 1;
 
         for (int i = 0; i <4; i++) if (VericadorVelha[i]==VericadorVelha[i+3] && VericadorVelha[i+3]==VericadorVelha[i+6]) return 1;
 

@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RME60fAFoSHRfYFtcaps4A7pkTOUJ0uTiZ+HjddFgAbsvIAjHmfGA2V2xyx8lu+hKgR6sPhyLZuRLrdvoJHxvw==",
+  "dgSpecHash": "O9PovI8xC8kHJSe0eSzahvUGqOs4EysLtzXNorE0Ohg8YLPcvrPYy3u5taZSD3ccynqnKr80PDCMo3VpUvQdTQ==",
   "success": true,
-  "projectFilePath": "H:\\Programação\\Jogo da velha\\Jogo da velha\\Jogo da velha\\Jogo da velha.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\thiag\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.23\\microsoft.windowsdesktop.app.ref.6.0.23.nupkg.sha512",
-    "C:\\Users\\thiag\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.23\\microsoft.netcore.app.ref.6.0.23.nupkg.sha512",
-    "C:\\Users\\thiag\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.23\\microsoft.aspnetcore.app.ref.6.0.23.nupkg.sha512",
-    "C:\\Users\\thiag\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.23\\microsoft.netcore.app.host.win-x64.6.0.23.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\thiag\\source\\repos\\Tekoryo\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

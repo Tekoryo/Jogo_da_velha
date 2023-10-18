@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Programação\\Jogo da velha\\Jogo da velha\\Jogo da velha\\Jogo da velha.csproj": {}
+    "C:\\Users\\thiag\\source\\repos\\Tekoryo\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj": {}
   },
   "projects": {
-    "H:\\Programação\\Jogo da velha\\Jogo da velha\\Jogo da velha\\Jogo da velha.csproj": {
+    "C:\\Users\\thiag\\source\\repos\\Tekoryo\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Programação\\Jogo da velha\\Jogo da velha\\Jogo da velha\\Jogo da velha.csproj",
+        "projectUniqueName": "C:\\Users\\thiag\\source\\repos\\Tekoryo\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj",
         "projectName": "Jogo da velha",
-        "projectPath": "H:\\Programação\\Jogo da velha\\Jogo da velha\\Jogo da velha\\Jogo da velha.csproj",
+        "projectPath": "C:\\Users\\thiag\\source\\repos\\Tekoryo\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj",
         "packagesPath": "C:\\Users\\thiag\\.nuget\\packages\\",
-        "outputPath": "H:\\Programação\\Jogo da velha\\Jogo da velha\\Jogo da velha\\obj\\",
+        "outputPath": "C:\\Users\\thiag\\Source\\Repos\\Tekoryo\\Jogo_da_velha\\Jogo da velha\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thiag\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -50,24 +50,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.23, 6.0.23]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.23, 6.0.23]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.23, 6.0.23]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.23, 6.0.23]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

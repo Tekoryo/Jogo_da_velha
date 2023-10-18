@@ -42,20 +42,25 @@ internal class Tabuleiro
     }
     private void isMovimento()
     {
-        string posicao = jogador.Jogada();
+        string posicao = jogador.IsJogada();
         
         for (int i = 0; i < Velha.GetLength(0); i++)
         {
+
             if (Velha[i]==posicao)
             {
                 if (Velha[i]!="x" || Velha[i]!="o")
                 {
                     Velha[i] = jogador.IsJogador();
                     jogador.SetContadorMovimento();
+                    return;
                 }
-                else Console.WriteLine($"Desculpe, Tente em outra posição");
-                
                 Thread.Sleep(1000);
+            }
+            else if(i==Velha.Length-1) 
+            {
+                Console.WriteLine($"Desculpe, Tente em outra posição");
+                Thread.Sleep(1000); 
             }
         }
     }

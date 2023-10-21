@@ -46,17 +46,20 @@ internal class Jogador
         if (NumeroMovimento % 2 == 0) return GetIsJogador(2);
         else return GetIsJogador(1);
     } 
-    public string VezDoJogador(int x)
+    public string VezDoJogador(int Indentificador)
     {
-        string Partida = " ";
         
-        if (x == 1)
+        if (Indentificador == 1)
         {
-            if(IsJogador()==GetIsJogador(2)) Partida = GetIsJogador(2).ToUpper();
-            else Partida = GetIsJogador(1).ToUpper();
+            if (IsJogador()==GetIsJogador(2)) return $"Jogador 2 {GetIsJogador(2)}";
+            else return $"Jogador 1 {GetIsJogador(1)}";
         }
+        else
+        {
+            if (IsJogador()==GetIsJogador(2)) return $"Jogador 1";
+            else return $"Jogador 2";
 
-        if (IsJogador()==GetIsJogador(2)) return $"Jogador 2 {Partida}";
-        else return $"Jogador 1 {Partida}";
+        }
+       
     }
 }

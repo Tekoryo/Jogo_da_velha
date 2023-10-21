@@ -37,7 +37,7 @@ internal class VerificacaoVitoria
     }
     public void IsVitoiraDe(int FimPartida)
     {
-        string Vitoria = player.VezDoJogador(0);
+        string Vitoria= player.VezDoJogador(0);
 
         if (FimPartida==1) Console.WriteLine($"Vitoria do {Vitoria}");
         else Console.WriteLine($"O jogo terminou em empate!");

@@ -21,10 +21,10 @@ internal class Tabuleiro
     public void isGerenciador()
     {
         
-            IsVerificarVitoria();            
             isTabuleiro();
            
             isMovimento();
+            IsVerificarVitoria();            
             Thread.Sleep(500);
             Console.Clear();
         
@@ -44,8 +44,7 @@ internal class Tabuleiro
     private void isMovimento()
     {
         string posicao = jogador.IsJogada();
-        //if (verificacao.SetIsVitoria()==1) return;
-
+       
         for (int i = 0; i < Velha.GetLength(0); i++)
         {
 

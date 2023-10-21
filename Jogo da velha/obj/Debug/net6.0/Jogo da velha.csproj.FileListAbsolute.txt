@@ -26,3 +26,17 @@ C:\Users\thiag\source\repos\Tekoryo\Jogo_da_velha\Jogo da velha\obj\Debug\net6.0
 C:\Users\thiag\source\repos\Tekoryo\Jogo_da_velha\Jogo da velha\obj\Debug\net6.0\Jogo da velha.pdb
 C:\Users\thiag\source\repos\Tekoryo\Jogo_da_velha\Jogo da velha\obj\Debug\net6.0\Jogo da velha.genruntimeconfig.cache
 C:\Users\thiag\source\repos\Tekoryo\Jogo_da_velha\Jogo da velha\obj\Debug\net6.0\ref\Jogo da velha.dll
+H:\Programação\Games\Jogo_da_velha\Jogo da velha\bin\Debug\net6.0\Jogo da velha.exe
+H:\Programação\Games\Jogo_da_velha\Jogo da velha\bin\Debug\net6.0\Jogo da velha.deps.json
+H:\Programação\Games\Jogo_da_velha\Jogo da velha\bin\Debug\net6.0\Jogo da velha.runtimeconfig.json
+H:\Programação\Games\Jogo_da_velha\Jogo da velha\bin\Debug\net6.0\Jogo da velha.dll
+H:\Programação\Games\Jogo_da_velha\Jogo da velha\bin\Debug\net6.0\Jogo da velha.pdb
+H:\Programação\Games\Jogo_da_velha\Jogo da velha\obj\Debug\net6.0\Jogo da velha.GeneratedMSBuildEditorConfig.editorconfig
+H:\Programação\Games\Jogo_da_velha\Jogo da velha\obj\Debug\net6.0\Jogo da velha.AssemblyInfoInputs.cache
+H:\Programação\Games\Jogo_da_velha\Jogo da velha\obj\Debug\net6.0\Jogo da velha.AssemblyInfo.cs
+H:\Programação\Games\Jogo_da_velha\Jogo da velha\obj\Debug\net6.0\Jogo da velha.csproj.CoreCompileInputs.cache
+H:\Programação\Games\Jogo_da_velha\Jogo da velha\obj\Debug\net6.0\Jogo da velha.dll
+H:\Programação\Games\Jogo_da_velha\Jogo da velha\obj\Debug\net6.0\refint\Jogo da velha.dll
+H:\Programação\Games\Jogo_da_velha\Jogo da velha\obj\Debug\net6.0\Jogo da velha.pdb
+H:\Programação\Games\Jogo_da_velha\Jogo da velha\obj\Debug\net6.0\Jogo da velha.genruntimeconfig.cache
+H:\Programação\Games\Jogo_da_velha\Jogo da velha\obj\Debug\net6.0\ref\Jogo da velha.dll

@@ -12,16 +12,14 @@ internal class Partida
         tabuleiro.SetIsDadosInicio();
         TipoJogador();
         do
-        {
-            //if (verificacao.SetIsVitoria()==1) break;
+        {           
             Console.WriteLine($"Vez do {player.VezDoJogador(1)}:");            
             tabuleiro.IsJogador(player);            
             tabuleiro.IsVerificador(verificacao);            
             tabuleiro.isGerenciador();
             
         } while (IsVerificacao());
-            Console.WriteLine($"teste1:");
-
+         
         if(verificacao.SetIsVitoria()==1) verificacao.IsVitoiraDe(1);
         else if(verificacao.SetIsVitoria()==-1) verificacao.IsVitoiraDe(-1);
     }

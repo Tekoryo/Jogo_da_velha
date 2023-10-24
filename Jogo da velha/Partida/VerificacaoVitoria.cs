@@ -4,12 +4,12 @@ namespace Jogo_da_velha.Partida;
 internal class VerificacaoVitoria
 {
     private string[] VericadorVelha = new String[9];
-    private Jogador player = new Jogador();
+    private Jogador jogador = new Jogador();
   
     public void IsDados(string[] XorO, Jogador Player)
     {
         for (int i = 0;i < VericadorVelha.GetLength(0); i++) VericadorVelha[i] = XorO[i];
-        player = Player;
+        jogador = Player;
     }
     private int IsVitoria()
     {
@@ -21,7 +21,7 @@ internal class VerificacaoVitoria
         if (VericadorVelha[0]==VericadorVelha[4] && VericadorVelha[4]==VericadorVelha[8]) return 1;
         else if (VericadorVelha[2]==VericadorVelha[4] && VericadorVelha[4]==VericadorVelha[6]) return 1;
 
-        if (player.GetContadorMovimento()==10)
+        if (jogador.GetContadorMovimento()==10)
         {
             return -1;
         }
@@ -37,7 +37,7 @@ internal class VerificacaoVitoria
     }
     public void IsVitoiraDe(int FimPartida)
     {
-        string Vitoria= player.VezDoJogador(0);
+        string Vitoria= jogador.IdJogadorVitoria();
 
         if (FimPartida==1) Console.WriteLine($"Vitoria do {Vitoria}");
         else Console.WriteLine($"O jogo terminou em empate!");

@@ -46,20 +46,14 @@ internal class Jogador
         if (NumeroMovimento % 2 == 0) return GetIsJogador(2);
         else return GetIsJogador(1);
     } 
-    public string VezDoJogador(int Indentificador)
+    public string IdJogador()
     {
-        
-        if (Indentificador == 1)
-        {
-            if (IsJogador()==GetIsJogador(2)) return $"Jogador 2 {GetIsJogador(2)}";
-            else return $"Jogador 1 {GetIsJogador(1)}";
-        }
-        else
-        {
-            if (IsJogador()==GetIsJogador(2)) return $"Jogador 1";
-            else return $"Jogador 2";
-
-        }
-       
+       if (IsJogador()==GetIsJogador(2)) return $"Jogador 2 {GetIsJogador(2)}";
+       else return $"Jogador 1 {GetIsJogador(1)}";
+    }
+    public string IdJogadorVitoria()
+    {
+       if (IsJogador()==GetIsJogador(2)) return $"Jogador 1";
+       else return $"Jogador 2";
     }
 }

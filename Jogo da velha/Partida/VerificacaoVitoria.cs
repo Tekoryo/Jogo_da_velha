@@ -3,9 +3,11 @@ namespace Jogo_da_velha.Partida;
 
 internal class VerificacaoVitoria
 {
-    private string[] VericadorVelha = new String[9];
+    
+    private string[] VericadorVelha = new string[9];
+    private List<string> PartidasJogadas = new List<string>();
     private Jogador jogador = new Jogador();
-  
+      
     public void IsDados(string[] XorO, Jogador Player)
     {
         for (int i = 0;i < VericadorVelha.GetLength(0); i++) VericadorVelha[i] = XorO[i];
@@ -39,9 +41,31 @@ internal class VerificacaoVitoria
     {
         string Vitoria= jogador.IdJogadorVitoria();
 
-        if (FimPartida==1) Console.WriteLine($"Vitoria do {Vitoria}");
-        else Console.WriteLine($"O jogo terminou em empate!");
+        if (FimPartida==1)
+        {
+            Console.WriteLine($"Vitoria do {Vitoria}");
+            PartidasJogadas.Add(Vitoria);
+        }
+        else
+        {
+            Console.WriteLine($"O jogo terminou em empate!");
+            PartidasJogadas.Add("EMPATE!");
+        }
+        PartidasJogadas.Add(Vitoria);
         Thread.Sleep(1000);
+    }
+    
+    public void ExibirResultadosPartidas()
+    {
+        Console.WriteLine($"RESULTADO DE TODAS AS PARTIDAS:");
+        int i = 1;
+        foreach (var partidas in PartidasJogadas)
+        {
+            Console.WriteLine($"Resultado Partida {i}º: {partidas}");
+            i++;
+        }
+        
+        Console.ReadKey();
     }
 }
 

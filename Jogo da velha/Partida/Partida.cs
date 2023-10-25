@@ -6,6 +6,7 @@ internal class Partida
     Jogador player = new Jogador();
     VerificacaoVitoria verificacao = new VerificacaoVitoria();
 
+
     public void IsPartida()
     {
         tabuleiro.SetIsVerificarVitoria();
@@ -35,6 +36,10 @@ internal class Partida
         if (verificacao.SetIsVitoria()==1) return false;
         else if (verificacao.SetIsVitoria()==-1) return false;
         return true;
+    }
+    public void IsVerificador(VerificacaoVitoria Verificador)
+    {
+        verificacao=Verificador;
     }
 
 }

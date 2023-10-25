@@ -2,17 +2,22 @@
 
 
 Partida partida = new Partida();
+VerificacaoVitoria verificacao = new VerificacaoVitoria();
 
+partida.IsVerificador(verificacao);
 void menu()
 {
-    string NPartida = "s";
-    do {
-        NovaPartida();
+    string? NPartida = "s";
+
+    do
+    {
+        NovaPartida(); 
 
         Console.WriteLine("Quer mais uma partida? [s/n]");
         NPartida = Console.ReadLine();
-    } while(NPartida!="n");    
-        
+        if (NPartida=="n") break;
+    } while (true);
+        verificacao. ExibirResultadosPartidas();
 }
 void NovaPartida()
 {

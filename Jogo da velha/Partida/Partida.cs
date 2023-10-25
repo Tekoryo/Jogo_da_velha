@@ -4,11 +4,12 @@ internal class Partida
 {
     Tabuleiro tabuleiro = new Tabuleiro();
     private List<string> ResultadoPartidas = new List<string>();
-    Jogador jogador; 
+    Jogador jogador = new Jogador(); 
     
     public void Comandos()
     {
         Console.WriteLine($"Esta funcionando!");
+        jogador.GetJogador();
         AddResultadoFinal();
     }    
     public void AddResultadoFinal()
@@ -27,9 +28,9 @@ internal class Partida
         }
     }
 
-    public void isJogador()
+    public void isJogador(string EscolhaJogador)
     {
-
+        jogador.SetJogador(EscolhaJogador);
     }
 }
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thiag\\OneDrive\\Documentos\\1 Programação\\Games\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj": {}
+    "H:\\Programação\\Games\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thiag\\OneDrive\\Documentos\\1 Programação\\Games\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj": {
+    "H:\\Programação\\Games\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thiag\\OneDrive\\Documentos\\1 Programação\\Games\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj",
+        "projectUniqueName": "H:\\Programação\\Games\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj",
         "projectName": "Jogo da velha",
-        "projectPath": "C:\\Users\\thiag\\OneDrive\\Documentos\\1 Programação\\Games\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj",
+        "projectPath": "H:\\Programação\\Games\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj",
         "packagesPath": "C:\\Users\\thiag\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thiag\\OneDrive\\Documentos\\1 Programação\\Games\\Jogo_da_velha\\Jogo da velha\\obj\\",
+        "outputPath": "H:\\Programação\\Games\\Jogo_da_velha\\Jogo da velha\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thiag\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -10,7 +10,7 @@ internal class Tabuleiro
         isDadosInicio();
     }
 
-    public void Setmovimento(string PosicaoEscolhida, string SimboloJogador)
+    public void Setmovimento(string PosicaoEscolhida, string SimboloJogador, int ContraIA)
     {
         for (int i = 0; i < PosicaoTabuleiro.GetLength(0); i++)
         {
@@ -25,7 +25,8 @@ internal class Tabuleiro
             }
             else if (i==PosicaoTabuleiro.Length-1)
             {
-                Console.WriteLine($"Desculpe, Tente em outra posição");
+                if(ContraIA==0) Console.WriteLine($"Desculpe, Tente em outra posição");
+
                 MovimentoValido = 1;
             }
         }

@@ -58,27 +58,29 @@ internal class Partida
 
     public void IsMovimentacao()
     {
+        int VezIa = 0;
+        if (ContraIA == 1 && jogador.GetNomeJogador() == "jogador 2") VezIa = 1;
         Console.WriteLine($"Vez do {jogador.GetNomeJogador()} do Simbolo {jogador.GetSimboloJogador()}: ");
         string? PosisaoEscolhida = MovimentoJogador(jogador.GetNomeJogador());
-        tabuleiro.Setmovimento(PosisaoEscolhida, jogador.GetSimboloJogador());
+        tabuleiro.Setmovimento(PosisaoEscolhida, jogador.GetSimboloJogador(),VezIa);
         Thread.Sleep(1000);
         Console.Clear();
     }
-    private string MovimentoJogador(string Jogador)
+    private string MovimentoJogador(string jogador)
     {
         string? EscolhaJogador;
         if (ContraIA == 1)
         {
-            if(Jogador == "Jogador 2")
+            if(jogador == "jogador 2")
             {
-
+                EscolhaJogador = Ia.EscolhendoPosicao();
+                return EscolhaJogador;
             }
             else
             {
                 EscolhaJogador = Console.ReadLine();
                 return EscolhaJogador;
             }
-            return " ";
         }
         else
         {

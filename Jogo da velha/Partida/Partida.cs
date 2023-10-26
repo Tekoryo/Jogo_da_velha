@@ -17,14 +17,26 @@ internal class Partida
             IsMovimentacao();
             if(tabuleiro.IsMovimentoValido()) jogador.SetNumerdorJogardo();
 
-        } while (verificacao.FinalizandoPartida(jogador.GetNumerdorJogardo())!);
-        
-        AddResultadoFinal();
-        jogador.FimPartida();
-    }    
-    public void AddResultadoFinal()
+        } while (verificacao.IsJogo(jogador.GetNumerdorJogardo())!);
+
+        FimPartida();
+    }  
+    private string ResultadoPartida()
     {
-        string Resultado = jogador.GetNomeJogador();
+        if (verificacao.CheckResultado()==1)
+        {
+            Console.WriteLine($"Vencedor Da Partida foi: {jogador.GetNomeJogador()}");
+            return $"{jogador.GetNomeJogador()}";
+        }
+        else
+        {
+            Console.WriteLine($"EMPATE!");
+            return "EMPATE!";
+        }
+
+    }
+    public void AddResultadoFinal(string Resultado)
+    {
         ResultadoPartidas.Add(Resultado);
     }
     public void ExibirResultadoPartida()
@@ -51,7 +63,10 @@ internal class Partida
     {
         jogador.SetJogador(EscolhaJogador);
     }
-
+    private void FimPartida()
+    {
+        AddResultadoFinal(ResultadoPartida());
+    }
 
 }
 

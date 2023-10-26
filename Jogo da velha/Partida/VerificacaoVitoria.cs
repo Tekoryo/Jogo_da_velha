@@ -5,7 +5,7 @@ internal class VerificacaoVitoria
 {
     private string[] VerificadorPosicao = new string[9];
     private int jogadas = 0;
-    public bool FinalizandoPartida(int NumeroJogadas)
+    public bool IsJogo(int NumeroJogadas)
     {
         jogadas=NumeroJogadas;
         if (jogadas ==10)

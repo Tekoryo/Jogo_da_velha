@@ -12,11 +12,12 @@ catch (Exception e)
 }
 void menu()
 {
-    //Titulo
-    
+    Console.WriteLine($"#### JOGO DA VELHA ####");
+
     partida.isJogador(EscolhendoJogador());
     do
     {
+        Console.WriteLine($"#### JOGO DA VELHA ####");
         Partidas();
                 
     } while (FinalizandoPartida()!);
@@ -24,8 +25,6 @@ void menu()
 }
 void Partidas()
 {
-    
-    
     partida.Comandos();
 }
 string EscolhendoJogador()
@@ -38,7 +37,7 @@ string EscolhendoJogador()
 bool FinalizandoPartida()
 {
     Console.WriteLine($"==================================");
-    Console.Write("Deseja Finalizar a partida? [S/n] ");
+    Console.Write("Deseja ter mais uma partida? [S/n] ");
     string? Finalizar = Console.ReadLine().ToUpper();
     
     if (Finalizar!="N") return true;

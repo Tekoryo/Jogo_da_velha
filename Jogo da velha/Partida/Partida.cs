@@ -8,13 +8,21 @@ internal class Partida
     
     public void Comandos()
     {
-        Console.WriteLine($"Esta funcionando!");
-        jogador.GetJogador();
+        int x = 0;
+        do
+        {
+            jogador.SetNumerdorJogardo();
+            tabuleiro.IsTabuleiro();
+            IsMovimentacao();
+            x++;
+        }while (x < 9);
+        
         AddResultadoFinal();
+        jogador.FimPartida();
     }    
     public void AddResultadoFinal()
     {
-        string Resultado = "Jogador 1!";
+        string Resultado = jogador.GetNomeJogador();
         ResultadoPartidas.Add(Resultado);
     }
     public void ExibirResultadoPartida()
@@ -26,6 +34,13 @@ internal class Partida
             Console.WriteLine($"Resultado da partida {i+1}º: {Resultado}");
             i++;
         }
+    }
+
+    public void IsMovimentacao()
+    {
+        Console.WriteLine($"Vez do {jogador.GetNomeJogador()} do Simbolo {jogador.GetSimboloJogador()}: ");
+        string? PosisaoEscolhida = Console.ReadLine();
+        tabuleiro.Setmovimento(PosisaoEscolhida, jogador.GetSimboloJogador());
     }
 
     public void isJogador(string EscolhaJogador)

@@ -9,6 +9,7 @@ internal class Partida
     
     public void Comandos()
     {
+        
         do
         {
             Console.WriteLine($"#### JOGO DA VELHA ####\n");
@@ -16,6 +17,8 @@ internal class Partida
             tabuleiro.IsTabuleiro();
             IsMovimentacao();
             if(tabuleiro.IsMovimentoValido()) jogador.SetNumerdorJogardo();
+            IsDadosVerificacao();
+            if (verificacao.CheckResultado()==1) break;
 
         } while (verificacao.IsJogo(jogador.GetNumerdorJogardo())!);
 
@@ -23,10 +26,11 @@ internal class Partida
     }  
     private string ResultadoPartida()
     {
+        
         if (verificacao.CheckResultado()==1)
         {
-            Console.WriteLine($"Vencedor Da Partida foi: {jogador.GetNomeJogador()}");
-            return $"{jogador.GetNomeJogador()}";
+            Console.WriteLine($"Vencedor Da Partida foi: {jogador.GetNomeFinalJogador()}");
+            return $"{jogador.GetNomeFinalJogador()}";
         }
         else
         {
@@ -66,8 +70,20 @@ internal class Partida
     private void FimPartida()
     {
         AddResultadoFinal(ResultadoPartida());
+        ResetPartida();
     }
-
+    public void IsDadosVerificacao()
+    {
+        for (int i = 0; i < 9; i++)
+        {
+            verificacao.SetVerificadorPosicao(i, tabuleiro.PosisaoArry(i));
+        }
+    }
+    public void ResetPartida()
+    {
+        tabuleiro.Resetabuleiro();
+        jogador.ResetJogador();
+    }
 }
 
 

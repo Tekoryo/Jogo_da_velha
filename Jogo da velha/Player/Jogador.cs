@@ -25,7 +25,11 @@ internal class Jogador
         if (VezJogador()==1) return $"{jogador1}";
         else return $"{jogador2}";
     }
-
+    public string GetNomeFinalJogador()
+    {
+        if (VezJogador()==1) return "jogador 2";
+        else return "jogador 1";
+    }
     public void SetNumerdorJogardo()
     {
         Numerador++;
@@ -39,7 +43,7 @@ internal class Jogador
         if (Numerador % 2 != 0) return 1;
         else return 0;
     }
-    public void FimPartida()
+    public void ResetJogador()
     {
         Numerador = 1;
     }

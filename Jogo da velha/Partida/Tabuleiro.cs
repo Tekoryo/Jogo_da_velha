@@ -56,5 +56,12 @@ internal class Tabuleiro
             return false;
         }
     }
-  
+    public string PosisaoArry(int x)
+    {
+        return PosicaoTabuleiro[x];
+    }
+    public void Resetabuleiro()
+    {
+        isDadosInicio();
+    }
 }

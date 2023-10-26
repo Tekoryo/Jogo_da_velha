@@ -22,12 +22,10 @@ internal class Tabuleiro
                     PosicaoTabuleiro[i] = SimboloJogador;
                     return;
                 }
-                Thread.Sleep(1000);
             }
             else if (i==PosicaoTabuleiro.Length-1)
             {
                 Console.WriteLine($"Desculpe, Tente em outra posição");
-                Thread.Sleep(1000);
             }
         }
     }

@@ -1,21 +1,24 @@
 ﻿namespace Jogo_da_velha.Partida;
 
-internal class Partida
+internal class Partida 
 {
     Tabuleiro tabuleiro = new Tabuleiro();
-    private List<string> ResultadoPartidas = new List<string>();
     Jogador jogador = new Jogador(); 
+    VerificacaoVitoria verificacao = new VerificacaoVitoria();
+    private List<string> ResultadoPartidas = new List<string>();
     
     public void Comandos()
     {
-        int x = 0;
         do
         {
-            jogador.SetNumerdorJogardo();
+            Console.WriteLine($"#### JOGO DA VELHA ####\n");
+
+
             tabuleiro.IsTabuleiro();
             IsMovimentacao();
-            x++;
-        }while (x < 9);
+            jogador.SetNumerdorJogardo();//Validar movimentos validos
+            
+        }while (verificacao.FinalizandoPartida());
         
         AddResultadoFinal();
         jogador.FimPartida();
@@ -41,6 +44,8 @@ internal class Partida
         Console.WriteLine($"Vez do {jogador.GetNomeJogador()} do Simbolo {jogador.GetSimboloJogador()}: ");
         string? PosisaoEscolhida = Console.ReadLine();
         tabuleiro.Setmovimento(PosisaoEscolhida, jogador.GetSimboloJogador());
+        Thread.Sleep(1000);
+        Console.Clear();
     }
 
     public void isJogador(string EscolhaJogador)

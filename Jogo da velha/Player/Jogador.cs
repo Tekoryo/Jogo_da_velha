@@ -5,7 +5,7 @@ internal class Jogador
 {
     private string? jogador1 { get; set; }
     private string? jogador2 { get; set; }
-    private int Numerador = 0;
+    private int Numerador = 1;
 
    public void SetJogador(string EscolhaJogador)
     {
@@ -37,6 +37,6 @@ internal class Jogador
     }
     public void FimPartida()
     {
-        Numerador = 0;
+        Numerador = 1;
     }
 }

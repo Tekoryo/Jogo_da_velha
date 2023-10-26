@@ -18,7 +18,7 @@ void menu()
     Console.Clear();
     do
     {
-        TituloJogo();
+        
         Partidas();
                 
     } while (FinalizandoPartida()!);

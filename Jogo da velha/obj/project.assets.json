@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Programação\\Games\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj",
+      "projectUniqueName": "C:\\Users\\thiag\\OneDrive\\Documentos\\1 Programação\\Games\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj",
       "projectName": "Jogo da velha",
-      "projectPath": "H:\\Programação\\Games\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj",
+      "projectPath": "C:\\Users\\thiag\\OneDrive\\Documentos\\1 Programação\\Games\\Jogo_da_velha\\Jogo da velha\\Jogo da velha.csproj",
       "packagesPath": "C:\\Users\\thiag\\.nuget\\packages\\",
-      "outputPath": "H:\\Programação\\Games\\Jogo_da_velha\\Jogo da velha\\obj\\",
+      "outputPath": "C:\\Users\\thiag\\OneDrive\\Documentos\\1 Programação\\Games\\Jogo_da_velha\\Jogo da velha\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\thiag\\AppData\\Roaming\\NuGet\\NuGet.Config",

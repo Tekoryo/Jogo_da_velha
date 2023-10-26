@@ -30,6 +30,10 @@ internal class Jogador
     {
         Numerador++;
     }
+    public int GetNumerdorJogardo()
+    {
+        return Numerador;
+    }
     public int VezJogador()
     {
         if (Numerador % 2 != 0) return 1;

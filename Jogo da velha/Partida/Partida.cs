@@ -13,12 +13,11 @@ internal class Partida
         {
             Console.WriteLine($"#### JOGO DA VELHA ####\n");
 
-
             tabuleiro.IsTabuleiro();
             IsMovimentacao();
-            jogador.SetNumerdorJogardo();//Validar movimentos validos
-            
-        }while (verificacao.FinalizandoPartida());
+            if(tabuleiro.IsMovimentoValido()) jogador.SetNumerdorJogardo();
+
+        } while (verificacao.FinalizandoPartida(jogador.GetNumerdorJogardo())!);
         
         AddResultadoFinal();
         jogador.FimPartida();
@@ -52,6 +51,8 @@ internal class Partida
     {
         jogador.SetJogador(EscolhaJogador);
     }
+
+
 }
 
 

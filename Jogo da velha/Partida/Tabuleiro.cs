@@ -4,7 +4,7 @@ namespace Jogo_da_velha.Partida;
 internal class Tabuleiro
 {
     private string[] PosicaoTabuleiro = new string[9];
-
+    private int MovimentoValido = 0;
     public Tabuleiro()
     {
         isDadosInicio();
@@ -26,6 +26,7 @@ internal class Tabuleiro
             else if (i==PosicaoTabuleiro.Length-1)
             {
                 Console.WriteLine($"Desculpe, Tente em outra posição");
+                MovimentoValido = 1;
             }
         }
     }
@@ -44,6 +45,15 @@ internal class Tabuleiro
         {
             int numero = i + 1;
             PosicaoTabuleiro[i] = numero.ToString();
+        }
+    }
+    public bool IsMovimentoValido()
+    {
+        if (MovimentoValido!=1) return true;
+        else
+        {
+            MovimentoValido = 0;
+            return false;
         }
     }
   

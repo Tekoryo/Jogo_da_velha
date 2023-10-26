@@ -5,7 +5,9 @@ internal class Partida
     Tabuleiro tabuleiro = new Tabuleiro();
     Jogador jogador = new Jogador(); 
     VerificacaoVitoria verificacao = new VerificacaoVitoria();
+    InteligenciaArtificial Ia = new InteligenciaArtificial();
     private List<string> ResultadoPartidas = new List<string>();
+    private int ContraIA = 0;
     
     public void Comandos()
     {
@@ -57,12 +59,33 @@ internal class Partida
     public void IsMovimentacao()
     {
         Console.WriteLine($"Vez do {jogador.GetNomeJogador()} do Simbolo {jogador.GetSimboloJogador()}: ");
-        string? PosisaoEscolhida = Console.ReadLine();
+        string? PosisaoEscolhida = MovimentoJogador(jogador.GetNomeJogador());
         tabuleiro.Setmovimento(PosisaoEscolhida, jogador.GetSimboloJogador());
         Thread.Sleep(1000);
         Console.Clear();
     }
+    private string MovimentoJogador(string Jogador)
+    {
+        string? EscolhaJogador;
+        if (ContraIA == 1)
+        {
+            if(Jogador == "Jogador 2")
+            {
 
+            }
+            else
+            {
+                EscolhaJogador = Console.ReadLine();
+                return EscolhaJogador;
+            }
+            return " ";
+        }
+        else
+        {
+            EscolhaJogador = Console.ReadLine();
+            return EscolhaJogador;
+        }
+    }
     public void isJogador(string EscolhaJogador)
     {
         jogador.SetJogador(EscolhaJogador);
@@ -78,6 +101,10 @@ internal class Partida
         {
             verificacao.SetVerificadorPosicao(i, tabuleiro.PosisaoArry(i));
         }
+    }
+    public void IaAtiva(string Ativar)
+    {
+        if (Ativar=="S") ContraIA=1;
     }
     public void ResetPartida()
     {

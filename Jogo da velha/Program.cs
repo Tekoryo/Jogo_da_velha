@@ -14,11 +14,11 @@ void menu()
 {
     TituloJogo();
 
-    partida.isJogador(EscolhendoJogador());
+    partida.isJogador(EscolhendoJogadores());
+
     Console.Clear();
     do
     {
-        
         Partidas();
                 
     } while (FinalizandoPartida()!);
@@ -28,11 +28,12 @@ void Partidas()
 {
     partida.Comandos();
 }
-string EscolhendoJogador()
+string EscolhendoJogadores()
 {
     Console.WriteLine($"============= X ou O =============");
     Console.Write("Escolha: ");
-    string? EscolhaJogador = Console.ReadLine();    
+    string? EscolhaJogador = Console.ReadLine();
+    ContraIA();
     return EscolhaJogador;
 }
 bool FinalizandoPartida()
@@ -43,6 +44,13 @@ bool FinalizandoPartida()
     
     if (Finalizar!="N") return true;
     else return false;
+}
+void ContraIA()
+{
+    Console.WriteLine($"==================================\n");
+    Console.Write("Deseja Ir contra uma IA? [S/n] ");
+    string? ContraIA = Console.ReadLine();
+    partida.IaAtiva(ContraIA.ToUpper());
 }
 void TituloJogo()
 {

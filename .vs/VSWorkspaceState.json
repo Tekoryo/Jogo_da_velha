@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Jogo da velha"
+    "\\Jogo da velha",
+    "\\Jogo da velha\\Player"
   ],
-  "SelectedNode": "\\Jogo da velha\\bin",
+  "SelectedNode": "\\Jogo da velha\\Player\\Jogador.cs",
   "PreviewInSolutionExplorer": false
 }

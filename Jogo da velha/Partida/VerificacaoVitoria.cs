@@ -1,47 +1,49 @@
 ﻿
+using System.Data;
+
 namespace Jogo_da_velha.Partida;
 
 internal class VerificacaoVitoria
 {
-    private string[] VericadorVelha = new String[9];
-    private Jogador jogador = new Jogador();
-  
-    public void IsDados(string[] XorO, Jogador Player)
+    private string[] VerificadorPosicao = new string[9];
+    private int jogadas = 0;
+    public bool IsJogo(int NumeroJogadas)
     {
-        for (int i = 0;i < VericadorVelha.GetLength(0); i++) VericadorVelha[i] = XorO[i];
-        jogador = Player;
+        jogadas=NumeroJogadas;
+        if (jogadas ==10)
+        {
+            jogadas = 0;
+
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
-    private int IsVitoria()
+    public int CheckResultado()
     {
-  
-        for (int i = 0; i <VericadorVelha.GetLength(0);i+=3) if (VericadorVelha[i]==VericadorVelha[i+1] && VericadorVelha[i]==VericadorVelha[i+2]) return 1;
 
-        for (int i = 0; i <3; i++) if (VericadorVelha[i]==VericadorVelha[i+3] && VericadorVelha[i+3]==VericadorVelha[i+6]) return 1;
+        // Vitoria
+        
+        for (int i = 0; i <VerificadorPosicao.GetLength(0); i+=3) if (VerificadorPosicao[i]==VerificadorPosicao[i+1] && VerificadorPosicao[i]==VerificadorPosicao[i+2]) return 1;
 
-        if (VericadorVelha[0]==VericadorVelha[4] && VericadorVelha[4]==VericadorVelha[8]) return 1;
-        else if (VericadorVelha[2]==VericadorVelha[4] && VericadorVelha[4]==VericadorVelha[6]) return 1;
+        for (int i = 0; i <3; i++) if (VerificadorPosicao[i]==VerificadorPosicao[i+3] && VerificadorPosicao[i+3]==VerificadorPosicao[i+6]) return 1;
 
-        if (jogador.GetContadorMovimento()==10)
+        if (VerificadorPosicao[0]==VerificadorPosicao[4] && VerificadorPosicao[4]==VerificadorPosicao[8]) return 1;
+        else if (VerificadorPosicao[2]==VerificadorPosicao[4] && VerificadorPosicao[4]==VerificadorPosicao[6]) return 1;
+
+        // empate
+
+        if (jogadas==8)
         {
             return -1;
         }
 
         return 0;
-
     }
-    public int SetIsVitoria()
+    public void SetVerificadorPosicao(int N, string Posicao)
     {
-        if (IsVitoria() ==1) return 1;
-        else if(IsVitoria()==-1) return -1;
-        return 0;
+        VerificadorPosicao[N] = Posicao;
     }
-    public void IsVitoiraDe(int FimPartida)
-    {
-        string Vitoria= jogador.IdJogadorVitoria();
-
-        if (FimPartida==1) Console.WriteLine($"Vitoria do {Vitoria}");
-        else Console.WriteLine($"O jogo terminou em empate!");
-        Thread.Sleep(1000);
-    }
-}
-
+}   

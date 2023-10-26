@@ -1,59 +1,50 @@
-﻿using System.Numerics;
-
+﻿
 namespace Jogo_da_velha;
 
 internal class Jogador
 {
-    private string? Jogador1;
-    private string? Jogador2;
-    private int NumeroMovimento=1;
- 
+    private string? jogador1 { get; set; }
+    private string? jogador2 { get; set; }
+    private int Numerador = 1;
 
-    public void SetContadorMovimento()
+   public void SetJogador(string EscolhaJogador)
     {
-        NumeroMovimento++;
-    }
-    public int GetContadorMovimento()
-    {
-       return NumeroMovimento;
-    }
-    public string GetIsJogador(int ID)
-    {
-        if(ID == 1)return Jogador1;
-        else return Jogador2;
-       
-    }
-    public void TipoPlayer(string Player1)
-    {
-        string Player2;
-       
-        if (Player1 == "x") Player2 = "o";
-        else Player2 = "x";
+        jogador1 = EscolhaJogador.ToUpper();
 
-        Jogador1 = Player1.ToUpper();
-        Jogador2 = Player2.ToUpper();
+        if (jogador1 == "X") jogador2 = "O";
+        else jogador2 = "X";
+        
     }
-
-    public string IsJogada()
+    public string GetNomeJogador()
     {
-        Console.WriteLine("\n Sua Jogada:");
-        string posicao = Console.ReadLine()!;
-        return posicao;        
+        if(VezJogador()==1) return "jogador 1";
+        else return "jogador 2";
     }
-
-    public string IsJogador() 
-    {        
-        if (NumeroMovimento % 2 == 0) return GetIsJogador(2);
-        else return GetIsJogador(1);
-    } 
-    public string IdJogador()
+    public string GetSimboloJogador()
     {
-       if (IsJogador()==GetIsJogador(2)) return $"Jogador 2 {GetIsJogador(2)}";
-       else return $"Jogador 1 {GetIsJogador(1)}";
+        if (VezJogador()==1) return $"{jogador1}";
+        else return $"{jogador2}";
     }
-    public string IdJogadorVitoria()
+    public string GetNomeFinalJogador()
     {
-       if (IsJogador()==GetIsJogador(2)) return $"Jogador 1";
-       else return $"Jogador 2";
+        if (VezJogador()==1) return "jogador 2";
+        else return "jogador 1";
+    }
+    public void SetNumerdorJogardo()
+    {
+        Numerador++;
+    }
+    public int GetNumerdorJogardo()
+    {
+        return Numerador;
+    }
+    public int VezJogador()
+    {
+        if (Numerador % 2 != 0) return 1;
+        else return 0;
+    }
+    public void ResetJogador()
+    {
+        Numerador = 1;
     }
 }

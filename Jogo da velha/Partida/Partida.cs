@@ -1,41 +1,89 @@
 ﻿namespace Jogo_da_velha.Partida;
 
-internal class Partida
+internal class Partida 
 {
     Tabuleiro tabuleiro = new Tabuleiro();
-    Jogador player = new Jogador();
+    Jogador jogador = new Jogador(); 
     VerificacaoVitoria verificacao = new VerificacaoVitoria();
-
-    public void IsPartida()
-    {
-        tabuleiro.SetIsVerificarVitoria();
-        tabuleiro.SetIsDadosInicio();
-        TipoJogador();
-        do
-        {           
-            Console.WriteLine($"Vez do {player.IdJogador()}:");            
-            tabuleiro.IsJogador(player);            
-            tabuleiro.IsVerificador(verificacao);            
-            tabuleiro.isGerenciador();
-            
-        } while (IsVerificacao());
-         
-        if(verificacao.SetIsVitoria()==1) verificacao.IsVitoiraDe(1);
-        else if(verificacao.SetIsVitoria()==-1) verificacao.IsVitoiraDe(-1);
-    }
-    private void TipoJogador()
-    {
-        Console.WriteLine("Qual Voce Escolhe Player1: [X/O]?");
-        string Player1 = Console.ReadLine()!;
-        player.TipoPlayer(Player1);
-    }
+    private List<string> ResultadoPartidas = new List<string>();
     
-    private bool IsVerificacao()
+    public void Comandos()
     {
-        if (verificacao.SetIsVitoria()==1) return false;
-        else if (verificacao.SetIsVitoria()==-1) return false;
-        return true;
+        
+        do
+        {
+            Console.WriteLine($"#### JOGO DA VELHA ####\n");
+
+            tabuleiro.IsTabuleiro();
+            IsMovimentacao();
+            if(tabuleiro.IsMovimentoValido()) jogador.SetNumerdorJogardo();
+            IsDadosVerificacao();
+            if (verificacao.CheckResultado()==1) break;
+
+        } while (verificacao.IsJogo(jogador.GetNumerdorJogardo())!);
+
+        FimPartida();
+    }  
+    private string ResultadoPartida()
+    {
+        
+        if (verificacao.CheckResultado()==1)
+        {
+            Console.WriteLine($"Vencedor Da Partida foi: {jogador.GetNomeFinalJogador()}");
+            return $"{jogador.GetNomeFinalJogador()}";
+        }
+        else
+        {
+            Console.WriteLine($"EMPATE!");
+            return "EMPATE!";
+        }
+
+    }
+    public void AddResultadoFinal(string Resultado)
+    {
+        ResultadoPartidas.Add(Resultado);
+    }
+    public void ExibirResultadoPartida()
+    {
+        Console.WriteLine($"Resultado das partidas:");
+        int i = 0;
+        foreach ( var Resultado in ResultadoPartidas)
+        {
+            Console.WriteLine($"Resultado da partida {i+1}º: {Resultado}");
+            i++;
+        }
     }
 
+    public void IsMovimentacao()
+    {
+        Console.WriteLine($"Vez do {jogador.GetNomeJogador()} do Simbolo {jogador.GetSimboloJogador()}: ");
+        string? PosisaoEscolhida = Console.ReadLine();
+        tabuleiro.Setmovimento(PosisaoEscolhida, jogador.GetSimboloJogador());
+        Thread.Sleep(1000);
+        Console.Clear();
+    }
+
+    public void isJogador(string EscolhaJogador)
+    {
+        jogador.SetJogador(EscolhaJogador);
+    }
+    private void FimPartida()
+    {
+        AddResultadoFinal(ResultadoPartida());
+        ResetPartida();
+    }
+    public void IsDadosVerificacao()
+    {
+        for (int i = 0; i < 9; i++)
+        {
+            verificacao.SetVerificadorPosicao(i, tabuleiro.PosisaoArry(i));
+        }
+    }
+    public void ResetPartida()
+    {
+        tabuleiro.Resetabuleiro();
+        jogador.ResetJogador();
+    }
 }
+
 

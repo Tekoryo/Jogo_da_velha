@@ -1,88 +1,67 @@
-﻿using System;
-using System.Security.AccessControl;
-
+﻿
 namespace Jogo_da_velha.Partida;
 
 internal class Tabuleiro
 {
-    private String[] Velha = new String[9];
-    Jogador jogador = new Jogador();
-    VerificacaoVitoria verificacao = new VerificacaoVitoria();
-
-    
-    private void IsVerificarVitoria()
-    {
-        verificacao.IsDados(Velha,jogador);
-    }
-    public void SetIsVerificarVitoria()
-    {
-        IsVerificarVitoria();
-    }
-    public void isGerenciador()
-    {
-        
-            isTabuleiro();
-           
-            isMovimento();
-            IsVerificarVitoria();            
-            Thread.Sleep(500);
-            Console.Clear();
-        
-    }
-
-    private void isTabuleiro()
-    {
-                        
-            Console.Write($"     {Velha[0]}     |     {Velha[1]}    |     {Velha[2]}    \n");
-            Console.Write($" __________|__________|__________ \n");
-            Console.Write($"     {Velha[3]}     |     {Velha[4]}    |     {Velha[5]}    \n");
-            Console.Write($" __________|__________|__________ \n");
-            Console.Write($"     {Velha[6]}     |     {Velha[7]}    |     {Velha[8]}    \n");
-            Console.Write($"           |          |           \n");
-
-    }
-    private void isMovimento()
-    {
-        string posicao = jogador.IsJogada();
-       
-        for (int i = 0; i < Velha.GetLength(0); i++)
-        {
-
-            if (Velha[i]==posicao)
-            {
-                if (Velha[i]!="x" || Velha[i]!="o")
-                {
-                    Velha[i] = jogador.IsJogador();
-                    jogador.SetContadorMovimento();
-                    return;
-                }
-                Thread.Sleep(1000);
-            }
-            else if(i==Velha.Length-1) 
-            {
-                Console.WriteLine($"Desculpe, Tente em outra posição");
-                Thread.Sleep(1000); 
-            }
-        }
-    }
-    private void isDadosInicio()
-    {
-        for (int i = 0;i < Velha.GetLength(0);i++)
-        {
-            int numero = i + 1;
-            Velha[i] = numero.ToString();
-        }
-    }
-    public void SetIsDadosInicio()
+    private string[] PosicaoTabuleiro = new string[9];
+    private int MovimentoValido = 0;
+    public Tabuleiro()
     {
         isDadosInicio();
     }
-    public void IsJogador(Jogador Player)
+
+    public void Setmovimento(string PosicaoEscolhida, string SimboloJogador)
     {
-        jogador=Player;
+        for (int i = 0; i < PosicaoTabuleiro.GetLength(0); i++)
+        {
+
+            if (PosicaoTabuleiro[i]==PosicaoEscolhida)
+            {
+                if (PosicaoTabuleiro[i]!="X" || PosicaoTabuleiro[i]!="O")
+                {
+                    PosicaoTabuleiro[i] = SimboloJogador;
+                    return;
+                }
+            }
+            else if (i==PosicaoTabuleiro.Length-1)
+            {
+                Console.WriteLine($"Desculpe, Tente em outra posição");
+                MovimentoValido = 1;
+            }
+        }
     }
-    public void IsVerificador(VerificacaoVitoria Verificador)
+    public void IsTabuleiro()
     {
-        verificacao=Verificador;
+        Console.Write($"     {PosicaoTabuleiro[0]}     |     {PosicaoTabuleiro[1]}    |     {PosicaoTabuleiro[2]}    \n");
+        Console.Write($" __________|__________|__________ \n");
+        Console.Write($"     {PosicaoTabuleiro[3]}     |     {PosicaoTabuleiro[4]}    |     {PosicaoTabuleiro[5]}    \n");
+        Console.Write($" __________|__________|__________ \n");
+        Console.Write($"     {PosicaoTabuleiro[6]}     |     {PosicaoTabuleiro[7]}    |     {PosicaoTabuleiro[8]}    \n");
+        Console.Write($"           |          |           \n");
+    }
+    private void isDadosInicio()
+    {
+        for (int i = 0; i < PosicaoTabuleiro.GetLength(0); i++)
+        {
+            int numero = i + 1;
+            PosicaoTabuleiro[i] = numero.ToString();
+        }
+    }
+    public bool IsMovimentoValido()
+    {
+        if (MovimentoValido!=1) return true;
+        else
+        {
+            MovimentoValido = 0;
+            return false;
+        }
+    }
+    public string PosisaoArry(int x)
+    {
+        return PosicaoTabuleiro[x];
+    }
+    public void Resetabuleiro()
+    {
+        isDadosInicio();
     }
 }
